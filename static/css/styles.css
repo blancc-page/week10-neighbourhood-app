@@ -195,7 +195,7 @@ a[aria-expanded="true"] {
     transition: transform 0.35s ease-in;
 }
 #sidebarCollapse.active{
-    transform: rotate(180deg);
+    transform: rotate(900deg);
 }
 
 a[data-toggle="collapse"] {
