@@ -1,7 +1,7 @@
-<nav id="sidebar" class="">
+<nav id="sidebar" class="active">
     <div class="sidebar-header ">
         <h3><a style="flex-wrap: wrap;" href="{% url 'index' %}">Neighbourood App</a></h3>
-        <strong> <h1>NH</h1> </strong>
+        <strong> <h1> <a href="/">NH</a></h1> </strong>
     </div>
     {% if user.is_authenticated %}
     <ul class="list-unstyled components mr-2 ml-2">

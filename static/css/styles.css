@@ -175,12 +175,12 @@ span {
 
 #sidebar ul li a:hover {
     color: teal;
-    background: #fff;
+    text-shadow: 10px 10px 5px rgba(255,255, 255, 0.9);
 }
 
 #sidebar ul li a p:hover {
     color: teal;
-    background: #fff;
+
 }
 #sidebar ul li a i {
     margin-right: 10px;
