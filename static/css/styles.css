@@ -1,7 +1,15 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
+}
+#sidebar.active p{
+    color: transparent;
+}
+#sidebar p{
+    transition: color 0.1s ease-in;
+    color: #fff;
 }
 .form-text, .asteriskField{
     display:none;
@@ -38,10 +46,21 @@ a:focus {
     text-decoration: none;
     transition: all 0.3s;
 }
+strong h1{
+    font-family: 'Homemade Apple', cursive;
+}
+h3 a{
+    font-family: 'Homemade Apple', cursive;
+}
+
+p:hover{
+    color: teal;
+}
 
 .navbar {
     padding: 20px 10px;
-    background-color: #35495e;
+    background-color: #57CC99;
+    background-position: center center;
     border: none;
     border-radius: 0;
     margin-bottom: 40px;
@@ -75,10 +94,13 @@ span {
     border-radius: 6px;
 }
 #sidebar {
-    min-width: 250px;
-    max-width: 250px;
+    background-image: url('https://images.unsplash.com/photo-1496309732348-3627f3f040ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 450px;
+    max-width: 450px;
     padding-right:10px;
-    background: #1a3e59;
     color: #fff;
     position: -webkit-sticky;
     position: sticky;
@@ -156,6 +178,10 @@ span {
     background: #fff;
 }
 
+#sidebar ul li a p:hover {
+    color: teal;
+    background: #fff;
+}
 #sidebar ul li a i {
     margin-right: 10px;
 }
@@ -164,6 +190,12 @@ span {
 a[aria-expanded="true"] {
     color: #fff;
     background: #6d7fcc;
+}
+#sidebarCollapse{
+    transition: transform 0.35s ease-in;
+}
+#sidebarCollapse.active{
+    transform: rotate(180deg);
 }
 
 a[data-toggle="collapse"] {
