@@ -1,0 +1,4 @@
+neighbourhood-virtual
+db*
+*pyc
+.env
