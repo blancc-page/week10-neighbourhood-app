@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from decouple import config,Csv
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 import django_heroku
 from pathlib import Path
 import dj_database_url
@@ -44,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'neighbourhoodApp',
     'crispy_forms',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -160,6 +164,12 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # configuring the location for media
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+cloudinary.config( 
+  cloud_name = config('CD_NAME'),
+  api_key = config('CD_API_KEY'), 
+  api_secret = config('CD_API_SECRET')
+)
 
 # Configure Django App for Heroku.
 django_heroku.settings(locals())
